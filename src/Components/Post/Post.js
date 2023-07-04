@@ -13,7 +13,6 @@ function Post(pros) {
     }, [])
 
     const videoShow = (id)=>{
-      console.log(id)
       axios.get(`tv/${id}/videos?api_key=${API_KEY}&language=en-US`).then(response=>{
         console.log(response.data)
         if(response.data.results.length !== 0){
